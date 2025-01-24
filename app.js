@@ -1,6 +1,7 @@
-const fs = require('fs')
-const http = require('http')
-const path = require('path')
+const fs = require('fs');
+const http = require('http');
+const path = require('path');
+const os = require('os');
 
 // fs.readFile('example.txt', 'utf-8', (err, data) => {
 //     if (err) {
@@ -30,9 +31,29 @@ const path = require('path')
 //     console.log('Server running at http://localhost:3000');
 // })
 
-const directory = '/user/local'
-const fileName = 'example.txt'
+// const directory = '/user/local'
+// const fileName = 'example.txt'
 
-const filePath = path.join(directory, fileName);
+// const filePath = path.join(directory, fileName);
 
-console.log(filePath);
+// console.log(filePath);
+
+// console.log('Platform: ', os.platform());
+// console.log('CPU Arichitecture: ', os.arch());
+// console.log('Total Memory: ', os.totalmem());
+// console.log('Free Memory: ', os.freemem());
+// console.log('Home Directory: ', os.homedir());
+// console.log('Uptime: ', os.uptime());
+// console.log('User Info: ', os.userInfo());
+// console.log('Load Average: ', os.loadavg());
+// console.log('Network Interfaces: ', os.networkInterfaces());
+// console.log('Release Info: ', os.release());
+// console.log('Temp Directory: ', os.tmpdir());
+// console.log('Type: ', os.type());
+// console.log('Version: ', os.version());
+// console.log('CPUs: ', os.cpus());
+// console.log('Endianness: ', os.endianness());
+// console.log('Constants: ', os.constants);
+// console.log('EOL: ', os.EOL);
+// console.log('Hostname: ', os.hostname());
+
