@@ -1,5 +1,6 @@
 const fs = require('fs')
 const http = require('http')
+const path = require('path')
 
 // fs.readFile('example.txt', 'utf-8', (err, data) => {
 //     if (err) {
@@ -19,12 +20,19 @@ const http = require('http')
 // })
 
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'text-plain')
-    res.end('Hello World')
-})
+// const server = http.createServer((req, res) => {
+//     res.statusCode = 200
+//     res.setHeader('Content-Type', 'text-plain')
+//     res.end('Hello World')
+// })
 
-server.listen(3000, () => {
-    console.log('Server running at http://localhost:3000');
-})
+// server.listen(3000, () => {
+//     console.log('Server running at http://localhost:3000');
+// })
+
+const directory = '/user/local'
+const fileName = 'example.txt'
+
+const filePath = path.join(directory, fileName);
+
+console.log(filePath);
