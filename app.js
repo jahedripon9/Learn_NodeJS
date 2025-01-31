@@ -94,7 +94,21 @@ const lodash = require('lodash');
 // console.log(math.add(5, 2));
 // console.log(math.subtract(10, 5));
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const reversed = lodash.reverse(numbers);
-console.log(reversed);
+// const reversed = lodash.reverse(numbers);
+// console.log(reversed);
+
+const readableStream = fs.createReadStream('example.txt', 'utf-8');
+
+readableStream.on('data', (chunk) => {
+    console.log(chunk);
+});
+
+readableStream.on('end', () => {
+    console.log('Finished Reading');
+});
+
+readableStream.on('error', (err) => {
+    console.error(err);
+})
