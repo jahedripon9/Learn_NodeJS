@@ -4,6 +4,8 @@ const path = require('path');
 const os = require('os');
 const url = require('url');
 const crypto = require('crypto');
+const sayHello = require('./greeting');
+const math = require('./math');
 
 
 //File System Module (Read File)
@@ -81,7 +83,13 @@ const crypto = require('crypto');
 
 // Crypto Module
 
-const hash = crypto.createHash('sha256');
-hash.update('Hello, World');
+// const hash = crypto.createHash('sha256');
+// hash.update('Hello, World');
 
-console.log(hash.digest('hex'));
+// console.log(hash.digest('hex'));
+
+const message = sayHello('Developers');
+
+console.log(message);
+console.log(math.add(5, 2));
+console.log(math.subtract(10, 5));
