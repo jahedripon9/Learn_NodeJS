@@ -6,7 +6,7 @@ const url = require('url');
 const crypto = require('crypto');
 const sayHello = require('./greeting');
 const math = require('./math');
-
+const lodash = require('lodash');
 
 //File System Module (Read File)
 // fs.readFile('example.txt', 'utf-8', (err, data) => {
@@ -88,8 +88,13 @@ const math = require('./math');
 
 // console.log(hash.digest('hex'));
 
-const message = sayHello('Developers');
+// const message = sayHello('Developers');
 
-console.log(message);
-console.log(math.add(5, 2));
-console.log(math.subtract(10, 5));
+// console.log(message);
+// console.log(math.add(5, 2));
+// console.log(math.subtract(10, 5));
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const reversed = lodash.reverse(numbers);
+console.log(reversed);
