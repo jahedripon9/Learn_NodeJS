@@ -99,16 +99,27 @@ const lodash = require('lodash');
 // const reversed = lodash.reverse(numbers);
 // console.log(reversed);
 
-const readableStream = fs.createReadStream('example.txt', 'utf-8');
+// const readableStream = fs.createReadStream('example.txt', 'utf-8');
 
-readableStream.on('data', (chunk) => {
-    console.log(chunk);
-});
+// readableStream.on('data', (chunk) => {
+//     console.log(chunk);
+// });
 
-readableStream.on('end', () => {
-    console.log('Finished Reading');
-});
+// readableStream.on('end', () => {
+//     console.log('Finished Reading');
+// });
 
-readableStream.on('error', (err) => {
-    console.error(err);
+// readableStream.on('error', (err) => {
+//     console.error(err);
+// })
+
+const writableStream = fs.createWriteStream('output2.txt');
+
+writableStream.write('Hello,  ');
+writableStream.write('World!');
+
+writableStream.end();
+
+writableStream.on('finish', () => { 
+    console.log('Finished Writing');
 })
